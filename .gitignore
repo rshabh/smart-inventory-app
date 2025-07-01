@@ -1,0 +1,64 @@
+# Java and Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper
+.mvn/
+!**/src/main/**/target/
+!**/src/test/**/target/
+mvnw
+mvnw.cmd
+
+# Logs
+*.log
+
+# IDEs
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Eclipse / Spring Tool Suite (STS)
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans/
+.sts4-cache/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets and configs
+application-secrets.properties
+.env
+*.key
+*.pem
+*.crt
+
+# Test reports
+surefire-reports/
+jacoco.exec
+
+# Dependency folders (if used accidentally)
+node_modules/
