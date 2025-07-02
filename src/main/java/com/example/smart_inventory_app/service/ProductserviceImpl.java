@@ -43,9 +43,6 @@ public class ProductserviceImpl implements ProductService {
             product2.setPrice(product.getPrice());
             product2.setQuantity(product.getQuantity());
             product2.setCategory(product.getCategory());
-            product2.setSupplier(product.getSupplier());
-            product2.setSupplierMail(product.getSupplierMail());
-
             repo.save(product2);
 
             return mp.map(product2,ProductDTO.class);
