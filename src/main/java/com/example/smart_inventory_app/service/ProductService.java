@@ -1,16 +1,15 @@
 package com.example.smart_inventory_app.service;
-import java.util.*;
-import com.example.smart_inventory_app.dto.product.ProductDTO;
+import java.util.List;
+
+import com.example.smart_inventory_app.dto.product.ProductRequestDTO;
+import com.example.smart_inventory_app.dto.product.ProductResponseDTO;
 
 
 
 public interface ProductService {
 
-    ProductDTO createProduct(ProductDTO productDTO);
-    ProductDTO updateProduct(int id, ProductDTO productDTO);
-    void deleteProduct(int id);
-    List<ProductDTO> getAllProducts();
-    List<ProductDTO> getProductsBelowPriceThreshold(int threshhold);
-    List<ProductDTO> getProductsByCategory(String category);
+    ProductResponseDTO createProduct(ProductRequestDTO productDTO);
+    List<ProductResponseDTO> getProducts();
+;
 
 }
