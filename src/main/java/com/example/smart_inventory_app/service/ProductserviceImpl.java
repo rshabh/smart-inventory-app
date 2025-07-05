@@ -2,6 +2,7 @@ package com.example.smart_inventory_app.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +33,7 @@ public class ProductserviceImpl implements ProductService {
         if(existingProduct.isPresent()){
             return mp.map(product,ProductResponseDTO.class);
         }
-        SupplierDTO temp = request.getSupplierdto();
-        supplierService.createSupplier(temp);
+        supplierService.createSupplier(request.getSupplierdto());
         repo.save(product);
         return(mp.map(product,ProductResponseDTO.class));
     }
